@@ -19,7 +19,7 @@ defmodule NomeModulo do
 end
 ```
 
-# Sintaxes
+# Sintaxe
 ```
 def menor(x,y) do
     cond do
