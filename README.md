@@ -1,5 +1,3 @@
-# Elixir
-
 # Execução
 ## Linux
 ```
@@ -47,10 +45,19 @@ end
 
 # Listas
 Geralmente usamos recursao com um caso de lista vazia e um com [h|t].
+
 ++          -> Concatena Listas.
+
 [h|t]       -> separa a lista em head e tail.
+
 [1|[2,3]]   -> Concatena uma head á um tail.
 
+# Átomos e Tuplas
+:legal                      -> Átomo cujo valor e nome é legal.
+
+{:retangulo, 2, 3}          -> Tupla de valores, tamanho imutável.
+
 # Funções Úteis
-rem(10,3) -> Devolve o resto da divisão
-String.reverse("string") -> Reverte uma string
+rem(10,3)                   -> Devolve o resto da divisão.
+
+String.reverse("string")    -> Reverte uma string.
