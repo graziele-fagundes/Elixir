@@ -1,6 +1,8 @@
-#Elixir
+# Elixir
 
-#Módulos
+# Módulos
+```
 defmodule NomeModulo do
 ...
 end
+```
