@@ -1,4 +1,14 @@
 defmodule Lista5 do
+  def area({:quadrado, lado}) do
+    lado * lado
+  end
+  def area({:retangulo, a, l}) do
+    a*l
+  end
+  def area({:circulo, r}) do
+    :math.pi() * (r * r)
+  end
+
   def soma_tuplas({{a,b}, {c,d}}) do
     a+b+c+d
   end
