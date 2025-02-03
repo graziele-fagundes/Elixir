@@ -76,4 +76,21 @@ defmodule Lista3 do
   def inverte_lista([h|t]) do
     inverte_lista(t) ++ [h]
   end
+
+  def primo?(n) when n<=1 do
+    false
+  end
+  def primo?(n) do
+    verifica_divisibilidade(n,2)
+  end
+
+  def verifica_divisibilidade(n,divisor) when n == divisor do
+    true
+  end
+  def verifica_divisibilidade(n,divisor) do
+    cond do
+      rem(n,divisor) == 0 -> false
+      true -> verifica_divisibilidade(n,divisor+1)
+    end
+  end
 end
