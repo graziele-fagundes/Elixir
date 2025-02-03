@@ -47,13 +47,13 @@ end
 ```
 
 # Listas
-Geralmente usamos recursao com um caso de lista vazia e um com [h|t].
+Geralmente usamos recursão com um caso de lista vazia e um com [h|t].
 
 ++          -> Concatena Listas.
 
 [h|t]       -> separa a lista em head e tail.
 
-[1|[2,3]]   -> Concatena uma head á um tail.
+[1 | [2,3]]   -> Concatena uma head á um tail.
 
 # Átomos e Tuplas
 :legal                      -> Átomo cujo valor e nome é legal.
