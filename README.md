@@ -28,11 +28,14 @@ def menor(x,y) do
     end
 end
 
-def menor(x,y) when x >= y do
+def menor(x,y) when x > y do
     y
 end
 def menor(x,y) when y > x do
     x
+end
+def menor(x,y) when y == x do
+    raise "Erro"
 end
 
 def fat(0) do
