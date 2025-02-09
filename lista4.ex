@@ -1,3 +1,4 @@
+# Ordenações
 defmodule Lista4 do
   def insertion_sort([]) do
     []
@@ -118,4 +119,39 @@ defmodule Lista4 do
       true -> maiores(pivo,t)
     end
   end
+
+  def bubble_sort([]) do
+    []
+  end
+  def bubble_sort([h|t]) do
+    [h1|t1] = troca(h, bubble_sort(t))
+    cond do
+      verifica_ordenacao([h1|t1]) -> [h1|t1]
+      true -> troca(h1, bubble_sort(t1))
+    end
+  end
+
+  defp troca(x,[]) do
+    [x]
+  end
+  defp troca(x,[h|t]) do
+    cond do
+      x > h -> [h | [x|t]]
+      true -> [x | [h|t]]
+    end
+  end
+
+  def verifica_ordenacao([]) do
+    true
+  end
+  def verifica_ordenacao([h|[]]) do
+    true
+  end
+  def verifica_ordenacao([h|[h2|t2]]) do
+    cond do
+      h > h2 -> false
+      true -> verifica_ordenacao([h2|t2])
+    end
+  end
+
 end

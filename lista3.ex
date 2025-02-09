@@ -1,3 +1,4 @@
+# Listas
 defmodule Lista3 do
   def mult_dois_lista([]) do
     []
@@ -77,20 +78,26 @@ defmodule Lista3 do
     inverte_lista(t) ++ [h]
   end
 
-  def primo?(n) when n<=1 do
-    false
+  def apenas_primos([]) do
+    []
   end
-  def primo?(n) do
-    verifica_divisibilidade(n,2)
+  def apenas_primos([h|t]) do
+    cond do
+      primo?(h) == true -> [h | apenas_primos(t)]
+      true -> apenas_primos(t)
+    end
   end
 
-  def verifica_divisibilidade(n,divisor) when n == divisor do
-    true
+  def primo?(n) do
+    verifica_primo(n,1)
   end
-  def verifica_divisibilidade(n,divisor) do
+
+  defp verifica_primo(n,divisor) do
     cond do
-      rem(n,divisor) == 0 -> false
-      true -> verifica_divisibilidade(n,divisor+1)
+      divisor == n -> true
+      divisor == 1 -> verifica_primo(n, divisor+1)
+      rem(n, divisor) == 0 -> false
+      true -> verifica_primo(n, divisor+1)
     end
   end
 end

@@ -1,3 +1,4 @@
+# Básico do CS
 defmodule Lista1 do
   def tres_iguais(a,b,c) do
     a == b && b == c
